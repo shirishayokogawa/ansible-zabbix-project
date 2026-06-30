@@ -1,7 +1,8 @@
 ---
 - name: Zabbix Automation
   hosts: all
+  gather_facts: no
 
   tasks:
     - name: Ping host
-      ping:
+      ansible.builtin.ping:
