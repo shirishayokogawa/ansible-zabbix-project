@@ -1,9 +1,10 @@
 ---
-- name: Test AWX
+- name: Test Zabbix to AWX
   hosts: localhost
   gather_facts: no
 
   tasks:
-    - name: Test message
+    - name: Show IP received from Zabbix
       debug:
-        msg: "AWX is working"
+        msg: "Target VM IP received: {{ target_host }}"
+
