@@ -1,8 +1,9 @@
 ---
-- name: Zabbix Automation
-  hosts: all
+- name: Test AWX
+  hosts: localhost
   gather_facts: no
 
   tasks:
-    - name: Ping host
-      ansible.builtin.ping:
+    - name: Test message
+      debug:
+        msg: "AWX is working"
